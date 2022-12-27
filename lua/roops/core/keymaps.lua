@@ -34,11 +34,6 @@ keymap.set("n", "<leader>c", '"_c') -- change to without yanking
 keymap.set("v", "<leader>d", '"_d') -- delete to without yanking
 keymap.set("v", "<leader>c", '"_c') -- change to without yanking
 
--- git
-keymap.set("n", "<leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>") -- toggle lazygit function declared in lazygit.lua
-keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>") -- open diff view
-keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diff view
-
 -- keymap.set("n", "<leader>q", ":q<CR>") -- quit
 keymap.set("n", "<leader>Q", ":qa<CR>") -- quit all
 keymap.set("n", "<leader>w", ":w<CR>") -- save
@@ -47,6 +42,11 @@ keymap.set("n", "<leader>W", ":wa<CR>") -- save all
 ---- plugin keymaps
 
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximise tab
+
+-- git
+keymap.set("n", "<leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>") -- toggle lazygit function declared in lazygit.lua
+keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>") -- open diff view
+keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diff view
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
