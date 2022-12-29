@@ -66,6 +66,7 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
+	use("hrsh7th/cmp-nvim-lsp")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -78,14 +79,12 @@ return packer.startup(function(use)
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
-	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-	use("simrat39/rust-tools.nvim") -- easy rust setup
-
-	-- debugging rust
-	use("mfussenegger/nvim-dap")
+	use("simrat39/rust-tools.nvim") -- rust tools
+	use("mfussenegger/nvim-dap") -- rust debugging
+	use("lvimuser/lsp-inlayhints.nvim") -- inlay hints
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -118,7 +117,6 @@ return packer.startup(function(use)
 	use("github/copilot.vim")
 
 	-- scroll
-	use("karb94/neoscroll.nvim") -- smooth scrolling
 	use("nvim-treesitter/nvim-treesitter-context") -- sticky scroll
 
 	-- barbar tabline

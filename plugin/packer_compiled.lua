@@ -150,6 +150,11 @@ _G.packer_plugins = {
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lsp-inlayhints.nvim"] = {
+    loaded = true,
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
+    url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -179,11 +184,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neoscroll.nvim"] = {
-    loaded = true,
-    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
-    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,

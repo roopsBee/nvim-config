@@ -5,4 +5,4 @@ if not setup then
 end
 
 -- configure/enable gitsigns
-gitsigns.setup({ current_line_blame = true })
+gitsigns.setup()

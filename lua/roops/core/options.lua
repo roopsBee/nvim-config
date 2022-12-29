@@ -44,3 +44,5 @@ opt.splitbelow = true
 opt.scrolloff = 8
 
 opt.iskeyword:append("-")
+
+vim.opt.completeopt = "menu,menuone,noselect"

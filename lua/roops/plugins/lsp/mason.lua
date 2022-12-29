@@ -28,6 +28,9 @@ mason_lspconfig.setup({
 		"tailwindcss",
 		"sumneko_lua",
 		"emmet_ls",
+		"taplo",
+		"jsonls",
+		"yamlls",
 		"rust_analyzer",
 	},
 	-- auto-install configured servers (with lspconfig)

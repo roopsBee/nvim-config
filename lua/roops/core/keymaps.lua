@@ -35,7 +35,7 @@ keymap.set("v", "<leader>d", '"_d') -- delete to without yanking
 keymap.set("v", "<leader>c", '"_c') -- change to without yanking
 
 -- keymap.set("n", "<leader>q", ":q<CR>") -- quit
-keymap.set("n", "<leader>Q", ":qa<CR>") -- quit all
+keymap.set("n", "<leader>Q", ":qa!<CR>") -- quit all
 keymap.set("n", "<leader>w", ":w<CR>") -- save
 keymap.set("n", "<leader>W", ":wa<CR>") -- save all
 
@@ -61,11 +61,11 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 -- barbar
 
 -- Move to previous/next
-keymap.set("n", "<M-,>", "<Cmd>BufferPrevious<CR>")
-keymap.set("n", "<M-.>", "<Cmd>BufferNext<CR>")
+keymap.set("n", "<M-j>", "<Cmd>BufferPrevious<CR>")
+keymap.set("n", "<M-k>", "<Cmd>BufferNext<CR>")
 -- Re-order to previous/next
-keymap.set("n", "<M-<>", "<Cmd>BufferMovePrevious<CR>")
-keymap.set("n", "<M->>", "<Cmd>BufferMoveNext<CR>")
+keymap.set("n", "<M-h>", "<Cmd>BufferMovePrevious<CR>")
+keymap.set("n", "<M-l>", "<Cmd>BufferMoveNext<CR>")
 -- Goto buffer in position...
 keymap.set("n", "<M-1>", "<Cmd>BufferGoto 1<CR>")
 keymap.set("n", "<M-2>", "<Cmd>BufferGoto 2<CR>")
@@ -100,3 +100,6 @@ keymap.set("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>")
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- restart lsp server
+keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
