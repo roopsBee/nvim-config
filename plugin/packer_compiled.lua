@@ -150,10 +150,10 @@ _G.packer_plugins = {
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lsp-inlayhints.nvim"] = {
+  ["inlay-hints.nvim"] = {
     loaded = true,
-    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
-    url = "https://github.com/lvimuser/lsp-inlayhints.nvim"
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
+    url = "https://github.com/simrat39/inlay-hints.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,

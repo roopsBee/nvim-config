@@ -84,7 +84,7 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use("simrat39/rust-tools.nvim") -- rust tools
 	use("mfussenegger/nvim-dap") -- rust debugging
-	use("lvimuser/lsp-inlayhints.nvim") -- inlay hints
+	use("simrat39/inlay-hints.nvim") -- inlay hints
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
