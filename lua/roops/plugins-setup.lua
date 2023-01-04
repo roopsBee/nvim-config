@@ -134,6 +134,10 @@ return packer.startup(function(use)
 	-- diffview
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
+	-- leap motions - move around faster
+	use("tpope/vim-repeat") -- dependency for leap motions
+	use("ggandor/leap.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

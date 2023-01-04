@@ -155,6 +155,11 @@ _G.packer_plugins = {
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/inlay-hints.nvim",
     url = "https://github.com/simrat39/inlay-hints.nvim"
   },
+  ["leap.nvim"] = {
+    loaded = true,
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -291,6 +296,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-surround"] = {
     loaded = true,
