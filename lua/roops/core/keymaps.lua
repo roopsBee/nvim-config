@@ -58,8 +58,7 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
--- barbar
-
+---- barbar
 -- Move to previous/next
 keymap.set("n", "<M-j>", "<Cmd>BufferPrevious<CR>")
 keymap.set("n", "<M-k>", "<Cmd>BufferNext<CR>")
@@ -103,3 +102,6 @@ keymap.set("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>")
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- sessions
+keymap.set("n", "<leader>sf", "<Cmd>SearchSession<CR>")

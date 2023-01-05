@@ -138,6 +138,13 @@ return packer.startup(function(use)
 	use("tpope/vim-repeat") -- dependency for leap motions
 	use("ggandor/leap.nvim")
 
+	-- session management
+	use("rmagatti/auto-session")
+	use({
+		"rmagatti/session-lens",
+		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
