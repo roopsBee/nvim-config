@@ -29,7 +29,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
-opt.colorcolumn = "80"
+-- opt.colorcolumn = "80"
 
 -- backspace
 opt.backspace = "indent,eol"
