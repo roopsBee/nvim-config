@@ -57,12 +57,18 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+
 ---- bufferline
 -- Move to previous/next
-keymap.set("n", "<M-h>", "<Cmd>BufferLineMoveNext<CR>")
-keymap.set("n", "<M-l>", "<Cmd>BufferLineMovePrev<CR>")
+keymap.set("n", "<M-k>", "<Cmd>BufferLineMoveNext<CR>")
+keymap.set("n", "<M-j>", "<Cmd>BufferLineMovePrev<CR>")
+--cycle through buffers
+keymap.set("n", "<M-l>", "<Cmd>BufferLineCycleNext<CR>")
+keymap.set("n", "<M-h>", "<Cmd>BufferLineCyclePrev<CR>")
 -- Magic buffer-picking mode
 keymap.set("n", "<leader>p", "<Cmd>BufferLinePick<CR>")
+--delete buffer
+keymap.set("n", "<M-x>", "<Cmd>Bdelete<CR>")
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
