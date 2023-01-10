@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require("roops.plugins-setup")
 require("roops.core.options")
 require("roops.core.keymaps")
@@ -24,4 +27,4 @@ require("roops.plugins.treesitter-context")
 require("roops.plugins.leap")
 require("roops.plugins.auto-session")
 require("roops.plugins.session-lens")
-require("roops.plugins.barbar")
+require("roops.plugins.bufferline")

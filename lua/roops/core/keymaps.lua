@@ -57,48 +57,12 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
-
----- barbar
+---- bufferline
 -- Move to previous/next
-keymap.set("n", "<M-j>", "<Cmd>BufferPrevious<CR>")
-keymap.set("n", "<M-k>", "<Cmd>BufferNext<CR>")
--- Re-order to previous/next
-keymap.set("n", "<M-h>", "<Cmd>BufferMovePrevious<CR>")
-keymap.set("n", "<M-l>", "<Cmd>BufferMoveNext<CR>")
--- Goto buffer in position...
-keymap.set("n", "<M-1>", "<Cmd>BufferGoto 1<CR>")
-keymap.set("n", "<M-2>", "<Cmd>BufferGoto 2<CR>")
-keymap.set("n", "<M-3>", "<Cmd>BufferGoto 3<CR>")
-keymap.set("n", "<M-4>", "<Cmd>BufferGoto 4<CR>")
-keymap.set("n", "<M-5>", "<Cmd>BufferGoto 5<CR>")
-keymap.set("n", "<M-6>", "<Cmd>BufferGoto 6<CR>")
-keymap.set("n", "<M-7>", "<Cmd>BufferGoto 7<CR>")
-keymap.set("n", "<M-8>", "<Cmd>BufferGoto 8<CR>")
-keymap.set("n", "<M-9>", "<Cmd>BufferGoto 9<CR>")
-keymap.set("n", "<M-0>", "<Cmd>BufferLast<CR>")
--- Pin/unpin buffer
-keymap.set("n", "<M-p>", "<Cmd>BufferPin<CR>")
--- Close buffer
-keymap.set("n", "<M-x>", "<Cmd>BufferClose<CR>")
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
+keymap.set("n", "<M-h>", "<Cmd>BufferLineMoveNext<CR>")
+keymap.set("n", "<M-l>", "<Cmd>BufferLineMovePrev<CR>")
 -- Magic buffer-picking mode
-keymap.set("n", "<C-p>", "<Cmd>BufferPick<CR>")
--- Sort automatically by...
-keymap.set("n", "<leader>bb", "<Cmd>BufferOrderByBufferNumber<CR>")
-keymap.set("n", "<leader>bd", "<Cmd>BufferOrderByDirectory<CR>")
-keymap.set("n", "<leader>bl", "<Cmd>BufferOrderByLanguage<CR>")
-keymap.set("n", "<leader>bw", "<Cmd>BufferOrderByWindowNumber<CR>")
-
--- Other:
--- :BarbarEnable - enables barbar (enabled by default)
--- :BarbarDisable - very bad command, should never be used
+keymap.set("n", "<leader>p", "<Cmd>BufferLinePick<CR>")
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

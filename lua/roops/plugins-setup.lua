@@ -119,8 +119,8 @@ return packer.startup(function(use)
 	-- scroll
 	use("nvim-treesitter/nvim-treesitter-context") -- sticky scroll
 
-	-- barbar tabline
-	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
+	-- buffer line - barbar potentially is causing nvim to crash
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- blank line indentation plugin
 	use("lukas-reineke/indent-blankline.nvim")
@@ -144,7 +144,6 @@ return packer.startup(function(use)
 		"rmagatti/session-lens",
 		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
 	})
-
 	if packer_bootstrap then
 		require("packer").sync()
 	end

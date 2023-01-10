@@ -3,15 +3,12 @@ if not setup then
 	return
 end
 
--- recommended settings from nvim-tree documentation
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- change color for arrows in tree to light blue
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#a442f5 ]])
 
 -- configure nvim-tree
 nvimtree.setup({
+	sync_root_with_cwd = true,
 	-- change folder arrow icons
 	renderer = {
 		icons = {
@@ -33,10 +30,21 @@ nvimtree.setup({
 			},
 		},
 	},
+	-- diagnostics = {
+	-- 	enable = true,
+	-- 	show_on_dirs = true,
+	-- 	icons = {
+	-- 		hint = "",
+	-- 		info = "",
+	-- 		warning = "",
+	-- 		error = "",
+	-- 	},
+	-- },
+	respect_buf_cwd = false,
 	update_focused_file = {
 		enable = true,
-	},
-	-- 	git = {
+		update_root = false,
+	}, -- 	git = {
 	-- 		ignore = false,
 	-- 	},
 })

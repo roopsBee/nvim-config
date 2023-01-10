@@ -89,11 +89,10 @@ _G.packer_plugins = {
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/auto-session",
     url = "https://github.com/rmagatti/auto-session"
   },
-  ["barbar.nvim"] = {
+  ["bufferline.nvim"] = {
     loaded = true,
-    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim",
-    wants = { "nvim-web-devicons" }
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,

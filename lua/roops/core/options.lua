@@ -45,4 +45,6 @@ opt.scrolloff = 8
 
 opt.iskeyword:append("-")
 
-vim.opt.completeopt = "menu,menuone,noselect"
+opt.completeopt = "menu,menuone,noselect"
+-- session options
+opt.sessionoptions = "blank,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
