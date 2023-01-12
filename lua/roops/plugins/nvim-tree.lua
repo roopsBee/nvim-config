@@ -11,6 +11,7 @@ nvimtree.setup({
 	sync_root_with_cwd = true,
 	-- change folder arrow icons
 	renderer = {
+		highlight_modified = "all",
 		icons = {
 			glyphs = {
 				folder = {
@@ -20,6 +21,7 @@ nvimtree.setup({
 			},
 		},
 	},
+	view = { side = "right" },
 	-- disable window_picker for
 	-- explorer to work well with
 	-- window splits
@@ -30,16 +32,16 @@ nvimtree.setup({
 			},
 		},
 	},
-	-- diagnostics = {
-	-- 	enable = true,
-	-- 	show_on_dirs = true,
-	-- 	icons = {
-	-- 		hint = "",
-	-- 		info = "",
-	-- 		warning = "",
-	-- 		error = "",
-	-- 	},
-	-- },
+	diagnostics = {
+		enable = true,
+		-- 	show_on_dirs = true,
+		-- 	icons = {
+		-- 		hint = "",
+		-- 		info = "",
+		-- 		warning = "",
+		-- 		error = "",
+		-- 	},
+	},
 	respect_buf_cwd = false,
 	update_focused_file = {
 		enable = true,

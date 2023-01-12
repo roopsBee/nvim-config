@@ -146,6 +146,9 @@ return packer.startup(function(use)
 		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
 	})
 
+	-- rainbow parentheses
+	use("mrjones2014/nvim-ts-rainbow")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
