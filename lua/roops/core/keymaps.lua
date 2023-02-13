@@ -29,9 +29,12 @@ keymap.set("n", "N", "Nzzzv") -- center cursor on search
 
 keymap.set("x", "<leader>p", '"_dP') -- paste over selection and keep same buffer
 
-keymap.set("n", "<leader>d", '"_d') -- delete to without yanking
+keymap.set("i", "<M-'>", "`") -- keymap for typing backticks in insert mode
+keymap.set("i", "<M-3>", "#") -- keymap for typing # in insert mode
+
+-- keymap.set("n", "<leader>d", '"_d') -- delete to without yanking
 keymap.set("n", "<leader>c", '"_c') -- change to without yanking
-keymap.set("v", "<leader>d", '"_d') -- delete to without yanking
+-- keymap.set("v", "<leader>d", '"_d') -- delete to without yanking
 keymap.set("v", "<leader>c", '"_c') -- change to without yanking
 
 -- keymap.set("n", "<leader>q", ":q<CR>") -- quit
