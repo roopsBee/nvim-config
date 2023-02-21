@@ -50,3 +50,7 @@ local Terminal = require("toggleterm.terminal").Terminal
 function _LAZYGIT_TOGGLE()
 	Terminal:new({ cmd = "lazygit" }):toggle()
 end
+
+function _CARGO_RUN()
+	Terminal:new({ cmd = "cargo run", close_on_exit = false }):toggle()
+end

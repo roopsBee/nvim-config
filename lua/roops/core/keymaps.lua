@@ -60,6 +60,7 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>fr", ":lua require('telescope.builtin').lsp_references()<cr>") -- list references to symbol under cursor"
 
 ---- bufferline
 -- Move to previous/next
@@ -78,3 +79,6 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- sessions
 keymap.set("n", "<leader>sf", "<Cmd>SearchSession<CR>")
+
+-- rust
+keymap.set("n", "<leader>rr", ":lua _CARGO_RUN()<CR>") -- toggle lazygit function declared in lazygit.lua
