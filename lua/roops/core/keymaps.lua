@@ -32,6 +32,8 @@ keymap.set("x", "<leader>p", '"_dP') -- paste over selection and keep same buffe
 keymap.set("i", "<M-'>", "`") -- keymap for typing backticks in insert mode
 keymap.set("i", "<M-3>", "#") -- keymap for typing # in insert mode
 
+keymap.set("i", "<C-e>", "=") -- remap =
+
 -- keymap.set("n", "<leader>d", '"_d') -- delete to without yanking
 keymap.set("n", "<leader>c", '"_c') -- change to without yanking
 -- keymap.set("v", "<leader>d", '"_d') -- delete to without yanking
@@ -51,8 +53,8 @@ keymap.set("n", "<leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>") -- toggle lazygit fu
 keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>") -- open diff view
 keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diff view
 
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- neotree
+keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
