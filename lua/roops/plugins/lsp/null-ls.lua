@@ -18,9 +18,13 @@ null_ls.setup({
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		null_ls.builtins.formatting.rustfmt, -- rustfmt
+		formatting.prettier.with({ -- js/ts formatter
+			extra_filetypes = { "astro" },
+		}),
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		diagnostics.eslint_d.with({ -- js/ts linter
+		diagnostics.eslint_d.with({
+			-- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else

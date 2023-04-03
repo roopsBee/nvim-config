@@ -1,6 +1,10 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
+-- vim.filetype.add({
+-- 	extension = {
+-- 		astro = "astro",
+-- 	},
+-- })
 require("roops.plugins-setup")
 require("roops.core.options")
 require("roops.core.keymaps")
