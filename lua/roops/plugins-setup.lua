@@ -159,11 +159,14 @@ return packer.startup(function(use)
 			vim.fn["fzf#install"]()
 		end,
 	})
+
+	use("nvim-lua/popup.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
+
 	--neo-tree
 	vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 	use("MunifTanjim/nui.nvim")
-
 	use({
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
