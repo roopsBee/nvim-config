@@ -91,4 +91,4 @@ keymap.set("n", "<leader>sf", "<Cmd>SearchSession<CR>")
 keymap.set("n", "<leader>rr", ":lua _CARGO_RUN()<CR>") -- toggle lazygit function declared in lazygit.lua
 
 -- quickfix
-keymap.set("n", "<leader>q", ":copen<CR>") -- open quickfix window
+keymap.set("n", "<leader>sq", ":copen<CR>") -- open quickfix window
