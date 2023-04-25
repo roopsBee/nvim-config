@@ -34,6 +34,7 @@ treesitter.setup({
 		"rust",
 		"markdown",
 		"markdown_inline",
+		"astro",
 	},
 	-- auto install above language parsers
 	auto_install = true,

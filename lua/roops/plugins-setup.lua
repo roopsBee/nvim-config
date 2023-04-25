@@ -397,9 +397,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- astro
-	-- use("wuelnerdotexe/vim-astro")
-
 	if packer_bootstrap then
 		require("packer").sync()
 	end
