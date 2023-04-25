@@ -109,3 +109,9 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+lspconfig["astro"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "astro" },
+})
