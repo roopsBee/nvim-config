@@ -37,6 +37,7 @@ null_ls.setup({
 
 		local function format_astro()
 			if is_astro_file then
+				vim.lsp.buf.format({ bufnr = bufnr })
 				vim.cmd("silent !prettier --write " .. vim.api.nvim_buf_get_name(bufnr))
 				vim.cmd("edit!")
 			end
@@ -49,9 +50,6 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					vim.lsp.buf.format({
-						filter = function(client)
-							return client.name == "null-ls"
-						end,
 						bufnr = bufnr,
 					})
 				end,
