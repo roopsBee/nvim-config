@@ -9,5 +9,5 @@ lualine.setup({
 		theme = "tokyonight",
 		disabled_filetypes = { "packer" },
 	},
-	sections = { lualine_c = { require("auto-session-library").current_session_name } },
+	-- sections = { lualine_c = { require("auto-session-library").current_session_name } },
 })
