@@ -70,12 +70,13 @@ keymap.set("n", "<leader>fl", "<cmd>Telescope resume<cr>") -- list references to
 keymap.set("n", "<leader>fi", "<cmd>Telescope media_files<cr>") -- list media files in current working directory
 
 ---- bufferline
+---
 -- Move to previous/next
-keymap.set("n", "<M-k>", "<Cmd>BufferLineMoveNext<CR>")
-keymap.set("n", "<M-j>", "<Cmd>BufferLineMovePrev<CR>")
+-- keymap.set("n", "<M-k>", "<Cmd>BufferLineMoveNext<CR>")
+-- keymap.set("n", "<M-j>", "<Cmd>BufferLineMovePrev<CR>")
 --cycle through buffers
-keymap.set("n", "<M-l>", "<Cmd>BufferLineCycleNext<CR>")
-keymap.set("n", "<M-h>", "<Cmd>BufferLineCyclePrev<CR>")
+keymap.set("n", "<M-.>", "<Cmd>BufferLineCycleNext<CR>")
+keymap.set("n", "<M-,>", "<Cmd>BufferLineCyclePrev<CR>")
 -- Magic buffer-picking mode
 keymap.set("n", "<leader>p", "<Cmd>BufferLinePick<CR>")
 --delete buffer
