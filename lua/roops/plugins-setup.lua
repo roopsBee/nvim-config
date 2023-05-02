@@ -137,10 +137,10 @@ return packer.startup(function(use)
 
 	-- session management
 	use("rmagatti/auto-session")
-	-- use({
-	-- "rmagatti/session-lens",
-	-- requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
-	-- })
+	use({
+		"rmagatti/session-lens",
+		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+	})
 
 	-- rainbow parentheses
 	use("mrjones2014/nvim-ts-rainbow")
