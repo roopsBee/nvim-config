@@ -35,6 +35,15 @@ null_ls.setup({
 	on_attach = function(current_client, bufnr)
 		local is_astro_file = vim.api.nvim_buf_get_option(bufnr, "filetype") == "astro"
 
+		local prettier_format = function()
+			vim.cmd("silent !prettier --write " .. vim.api.nvim_buf_get_name(bufnr))
+			vim.cmd("edit!")
+		end
+
+		local null_ls_format = function()
+			vim.lsp.buf.format({ bufnr = bufnr })
+		end
+
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {
@@ -42,7 +51,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					if is_astro_file then
-						vim.lsp.buf.format({ bufnr = bufnr })
+						prettier_format()
 					else
 						vim.lsp.buf.format({
 							filter = function(client)
