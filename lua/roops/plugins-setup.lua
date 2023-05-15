@@ -145,12 +145,6 @@ return packer.startup(function(use)
 	-- rainbow parentheses
 	use("mrjones2014/nvim-ts-rainbow")
 
-	use({
-		"laytan/tailwind-sorter.nvim",
-		requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
-		run = "cd formatter && npm i && npm run build",
-	})
-
 	-- better quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = { "qf" } })
 	use({

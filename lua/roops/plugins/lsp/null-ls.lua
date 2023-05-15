@@ -18,7 +18,7 @@ null_ls.setup({
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		null_ls.builtins.formatting.rustfmt, -- rustfmt
-		formatting.prettier.with({ -- js/ts formatter
+		formatting.prettierd.with({ -- js/ts formatter
 			extra_filetypes = { "astro" },
 		}),
 		formatting.prettier, -- js/ts formatter
@@ -33,34 +33,19 @@ null_ls.setup({
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
-		local is_astro_file = vim.api.nvim_buf_get_option(bufnr, "filetype") == "astro"
-
-		local prettier_format = function()
-			vim.cmd("silent !prettier --write " .. vim.api.nvim_buf_get_name(bufnr))
-			vim.cmd("edit!")
-		end
-
-		local null_ls_format = function()
-			vim.lsp.buf.format({ bufnr = bufnr })
-		end
-
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					if is_astro_file then
-						prettier_format()
-					else
-						vim.lsp.buf.format({
-							filter = function(client)
-								--  only use null-ls for formatting instead of lsp server
-								return client.name == "null-ls"
-							end,
-							bufnr = bufnr,
-						})
-					end
+					vim.lsp.buf.format({
+						filter = function(client)
+							--  only use null-ls for formatting instead of lsp server
+							return client.name == "null-ls"
+						end,
+						bufnr = bufnr,
+					})
 				end,
 			})
 		end
