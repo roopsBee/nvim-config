@@ -47,4 +47,4 @@ opt.iskeyword:append("-")
 
 opt.completeopt = "menu,menuone,noselect"
 -- session options
-opt.sessionoptions = "blank,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

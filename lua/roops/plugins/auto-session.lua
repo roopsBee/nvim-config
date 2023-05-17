@@ -12,7 +12,6 @@ local function open_neo_tree()
 	vim.notify("opening neotree")
 	require("neo-tree.sources.manager").show("filesystem")
 end
-
 auto_session.setup({
 	auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
 	auto_save_enabled = true,
@@ -31,3 +30,4 @@ auto_session.setup({
 		prompt_title = "SESSIONS",
 	},
 })
+-- require("auto-session").setup_session_lens()
