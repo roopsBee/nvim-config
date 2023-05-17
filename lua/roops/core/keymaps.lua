@@ -83,7 +83,7 @@ keymap.set("n", "<M-x>", "<Cmd>Bdelete<CR>")
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- sessions
-keymap.set("n", "<leader>sf", "<Cmd>SearchSession<CR>")
+keymap.set("n", "<leader>sf", require("auto-session.session-lens").search_session)
 
 -- rust
 keymap.set("n", "<leader>rr", ":lua _CARGO_RUN()<CR>") -- toggle lazygit function declared in lazygit.lua

@@ -299,11 +299,6 @@ _G.packer_plugins = {
     path = "/home/roopsbee/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
-  ["session-lens"] = {
-    loaded = true,
-    path = "/home/roopsbee/.local/share/nvim/site/pack/packer/start/session-lens",
-    url = "https://github.com/rmagatti/session-lens"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/roopsbee/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

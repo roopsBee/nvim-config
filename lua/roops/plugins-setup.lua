@@ -136,11 +136,12 @@ return packer.startup(function(use)
 	use("ggandor/leap.nvim")
 
 	-- session management
-	use("rmagatti/auto-session")
-	use({
-		"rmagatti/session-lens",
-		requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
-	})
+	use({ "rmagatti/auto-session", tag = "v2.*" })
+	-- use({
+	-- 	"rmagatti/session-lens",
+	--    tag="v2.*",
+	-- 	requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+	-- })
 
 	-- rainbow parentheses
 	use("mrjones2014/nvim-ts-rainbow")

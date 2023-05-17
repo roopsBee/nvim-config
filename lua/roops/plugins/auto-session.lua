@@ -14,8 +14,7 @@ local function open_neo_tree()
 end
 
 auto_session.setup({
-	auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-	-- post_restore_cmds = { ":NvimTreeToggle" },
+	auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
 	auto_save_enabled = true,
 	auto_restore_enabled = true,
 	auto_session_use_git_branch = true,
@@ -25,5 +24,10 @@ auto_session.setup({
 	},
 	post_restore_cmds = {
 		open_neo_tree,
+	},
+	session_lens = {
+		load_on_startup = true,
+		path_display = { "shorten" },
+		prompt_title = "SESSIONS",
 	},
 })
