@@ -34,6 +34,14 @@ vim.api.nvim_create_autocmd({ "User" }, {
 })
 
 vim.api.nvim_create_autocmd({ "User" }, {
+	pattern = "PersistedLoadPre",
+	group = group,
+	callback = function()
+		vim.cmd("silent %bd!")
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
 	pattern = "PersistedLoadPost",
 	group = group,
 	callback = function()
