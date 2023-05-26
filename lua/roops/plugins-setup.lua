@@ -136,7 +136,14 @@ return packer.startup(function(use)
 	use("ggandor/leap.nvim")
 
 	-- session management
-	use({ "rmagatti/auto-session", tag = "v2.*" })
+	-- use({ "rmagatti/auto-session", tag = "v2.*" })
+
+	use({
+		"olimorris/persisted.nvim",
+		config = function()
+			require("persisted").setup()
+		end,
+	})
 
 	-- rainbow parentheses
 	use("mrjones2014/nvim-ts-rainbow")
