@@ -21,7 +21,6 @@ null_ls.setup({
 		formatting.prettierd.with({ -- js/ts formatter
 			extra_filetypes = { "astro" },
 		}),
-		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		diagnostics.eslint_d.with({
 			-- js/ts linter
