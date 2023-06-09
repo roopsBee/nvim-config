@@ -30,6 +30,7 @@ keymap.set("n", "N", "Nzzzv") -- center cursor on search
 keymap.set("x", "<leader>p", '"_dP') -- paste over selection and keep same buffer
 
 keymap.set("i", "<C-e>", "=") -- remap =
+keymap.set("n", ";", ":") -- remap normal mode ; to : command
 
 -- format document
 keymap.set("n", "<leader>fm", ":lua vim.lsp.buf.format({async = true})<CR>")
