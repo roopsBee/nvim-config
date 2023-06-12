@@ -93,7 +93,7 @@ keymap.set("n", "<leader>rr", ":lua _CARGO_RUN()<CR>") -- toggle lazygit functio
 keymap.set("n", "<leader>sq", ":copen<CR>") -- open quickfix window
 
 -- split navigation
-keymap.set("n", "<A-h>", "<C-w>h") -- move to split left
-keymap.set("n", "<A-j>", "<C-w>j") -- move to split below
-keymap.set("n", "<A-k>", "<C-w>k") -- move to split above
-keymap.set("n", "<A-l>", "<C-w>l") -- move to split right
+keymap.set("n", "<C-h>", "<C-w>h") -- move to split left
+keymap.set("n", "<C-j>", "<C-w>j") -- move to split below
+keymap.set("n", "<C-k>", "<C-w>k") -- move to split above
+keymap.set("n", "<C-l>", "<C-w>l") -- move to split right
