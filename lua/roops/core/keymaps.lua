@@ -73,8 +73,8 @@ keymap.set("n", "<leader>fi", "<cmd>Telescope media_files<cr>") -- list media fi
 -- keymap.set("n", "<M-k>", "<Cmd>BufferLineMoveNext<CR>")
 -- keymap.set("n", "<M-j>", "<Cmd>BufferLineMovePrev<CR>")
 --cycle through buffers
-keymap.set("n", "<M-.>", "<Cmd>BufferLineCycleNext<CR>")
-keymap.set("n", "<M-,>", "<Cmd>BufferLineCyclePrev<CR>")
+keymap.set("n", "<A-.>", "<Cmd>BufferLineCycleNext<CR>")
+keymap.set("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>")
 -- Magic buffer-picking mode
 keymap.set("n", "<leader>p", "<Cmd>BufferLinePick<CR>")
 --delete buffer
