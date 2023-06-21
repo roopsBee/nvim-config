@@ -22,15 +22,13 @@ null_ls.setup({
 			extra_filetypes = { "astro" },
 		}),
 		formatting.stylua, -- lua formatter
-		diagnostics.eslint_d.with({
-			-- js/ts linter
+		diagnostics.eslint.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
 				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
 			end,
 		}),
-	},
-	-- configure format on save
+	}, -- configure format on save
 	on_attach = function(current_client, bufnr)
 		if current_client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
