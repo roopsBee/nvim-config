@@ -18,10 +18,9 @@ null_ls.setup({
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 		null_ls.builtins.formatting.rustfmt, -- rustfmt
-		formatting.prettierd.with({ -- js/ts formatter
+		formatting.prettier.with({ -- js/ts formatter
 			extra_filetypes = { "astro" },
 		}),
-		formatting.prettierd, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		diagnostics.eslint.with({
 			-- js/ts linter
@@ -40,6 +39,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					vim.lsp.buf.format({
+						timeout_ms = 5000,
 						filter = function(client)
 							--  only use null-ls for formatting instead of lsp server
 							return client.name == "null-ls"
