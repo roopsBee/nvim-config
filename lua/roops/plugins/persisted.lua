@@ -3,11 +3,6 @@ local function close_neo_tree()
 	vim.notify("closed all")
 end
 
-local function open_neo_tree()
-	vim.notify("opening neotree")
-	require("neo-tree.sources.manager").show("filesystem")
-end
-
 require("persisted").setup({
 	save_dir = vim.fn.expand(vim.fn.stdpath("data") .. "/sessions/"), -- directory where session files are saved
 	silent = false, -- silent nvim message when sourcing session file
@@ -41,10 +36,3 @@ vim.api.nvim_create_autocmd({ "User" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "User" }, {
-	pattern = "PersistedLoadPost",
-	group = group,
-	callback = function()
-		open_neo_tree()
-	end,
-})
