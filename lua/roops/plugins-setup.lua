@@ -29,6 +29,14 @@ end
 
 -- add list of plugins to install
 return packer.startup(function(use)
+	use({
+		"laytan/tailwind-sorter.nvim",
+		requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("tailwind-sorter").setup()
+		end,
+		run = "cd formatter && npm i && npm run build",
+	})
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 

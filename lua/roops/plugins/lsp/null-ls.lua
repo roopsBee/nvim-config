@@ -38,6 +38,7 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
+					vim.cmd("TailwindSort")
 					vim.lsp.buf.format({
 						timeout_ms = 5000,
 						filter = function(client)
