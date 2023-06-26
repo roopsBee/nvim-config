@@ -152,9 +152,6 @@ return packer.startup(function(use)
 		end,
 	})
 
-	-- rainbow parentheses
-	use("mrjones2014/nvim-ts-rainbow")
-
 	-- better quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = { "qf" } })
 	use({
