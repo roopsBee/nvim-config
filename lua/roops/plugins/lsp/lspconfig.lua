@@ -28,6 +28,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "<leader>ld", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	keymap.set("n", "<leader>lp", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "<leader>lt", "<cmd>Lspsaga peek_type_definition<CR>", opts) -- see definition and make edits in window
+	keymap.set("n", "<leader>lg", "<cmd>Lspsaga goto_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "<leader>li", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 	keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
