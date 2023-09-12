@@ -81,6 +81,11 @@ lspconfig["cssls"].setup({
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		tailwindCSS = {
+			classAttributes = { "class", "className", "classNames", "class:list", "classList", "ngClass" },
+		},
+	},
 })
 
 -- configure emmet language server
