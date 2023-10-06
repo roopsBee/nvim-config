@@ -164,6 +164,14 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
 
+	-- merge conflicts
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
 	--neo-tree
 	vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
