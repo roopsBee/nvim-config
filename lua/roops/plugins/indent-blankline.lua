@@ -34,7 +34,5 @@ ibl.setup({
 		tab_char = "|",
 		highlight = highlight,
 	},
-	scope = {
-		char = "|",
-	},
+	scope = { enabled = false },
 })
