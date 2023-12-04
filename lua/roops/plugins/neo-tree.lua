@@ -15,7 +15,6 @@ require("neo-tree").setup({
 	-- popup_border_style is for input and confirmation dialogs.
 	-- Configurtaion of floating window is done in the individual source sections.
 	-- "NC" is a special style that works well with NormalNC set
-	close_floats_on_escape_key = true,
 	default_source = "filesystem",
 	enable_diagnostics = true,
 	enable_git_status = true,
@@ -356,7 +355,7 @@ require("neo-tree").setup({
 				"add",
 				-- some commands may take optional config options, see `:h neo-tree-mappings` for details
 				config = {
-					show_path = "none", -- "none", "relative", "absolute"
+					show_path = "relative", -- "none", "relative", "absolute"
 				},
 			},
 			["A"] = "add_directory", -- also accepts the config.show_path and config.insert_as options.
@@ -366,7 +365,10 @@ require("neo-tree").setup({
 			["x"] = "cut_to_clipboard",
 			["p"] = "paste_from_clipboard",
 			["c"] = "copy", -- takes text input for destination, also accepts the config.show_path and config.insert_as options
-			["m"] = "move", -- takes text input for destination, also accepts the config.show_path and config.insert_as options
+			["m"] = {
+				"move",
+				config = { show_path = "relative" },
+			}, -- takes text input for destination, also accepts the config.show_path and config.insert_as options
 			["e"] = "toggle_auto_expand_width",
 			["q"] = "close_window",
 			["?"] = "show_help",

@@ -32,6 +32,13 @@ keymap.set("x", "<leader>p", '"_dP') -- paste over selection and keep same buffe
 keymap.set("i", "<C-e>", "=") -- remap =
 keymap.set("n", ";", ":") -- remap normal mode ; to : command
 
+-- move line
+keymap.set("n", "<A-J>", ":m .+1<CR>==") -- move line down
+keymap.set("n", "<A-K>", ":m .-2<CR>==") -- move line up
+keymap.set("i", "<A-J>", "<Esc>:m .+1<CR>==gi") -- move line down
+keymap.set("i", "<A-K>", "<Esc>:m .-2<CR>==gi") -- move line up
+keymap.set("v", "<A-J>", ":m '>+1<CR>gv=gv") -- move line down
+
 -- format document
 keymap.set("n", "<leader>fm", ":lua vim.lsp.buf.format({async = true})<CR>")
 
