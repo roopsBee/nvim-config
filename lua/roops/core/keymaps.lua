@@ -58,8 +58,8 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle maximise tab
 
 -- git
 keymap.set("n", "<leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>") -- toggle lazygit function declared in lazygit.lua
-keymap.set("n", "<leader>gd", ":DiffviewOpen<CR>") -- open diff view
-keymap.set("n", "<leader>gx", ":DiffviewClose<CR>") -- close diff view
+keymap.set("n", "<leader>do", ":DiffviewOpen<CR>") -- open diff view
+keymap.set("n", "<leader>dx", ":DiffviewClose<CR>") -- close diff view
 
 -- neotree
 keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
