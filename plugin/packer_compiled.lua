@@ -296,6 +296,11 @@ _G.packer_plugins = {
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/Users/roopeshpatel/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
@@ -375,10 +380,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tailwind-sorter.nvim
-time([[Config for tailwind-sorter.nvim]], true)
-try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0", "config", "tailwind-sorter.nvim")
-time([[Config for tailwind-sorter.nvim]], false)
 -- Config for: neo-tree.nvim
 time([[Config for neo-tree.nvim]], true)
 try_loadstring("\27LJ\2\n�\3\0\0\4\0\14\0!6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0'\2\5\0005\3\6\0B\0\3\0016\0\0\0009\0\3\0009\0\4\0'\2\a\0005\3\b\0B\0\3\0016\0\0\0009\0\3\0009\0\4\0'\2\t\0005\3\n\0B\0\3\0016\0\0\0009\0\3\0009\0\4\0'\2\v\0005\3\f\0B\0\3\0016\0\0\0009\0\1\0'\2\r\0B\0\2\1K\0\1\0#nnoremap \\ :Neotree reveal<cr>\1\0\2\vtexthl\23DiagnosticSignHint\ttext\b\23DiagnosticSignHint\1\0\2\vtexthl\23DiagnosticSignInfo\ttext\t \23DiagnosticSignInfo\1\0\2\vtexthl\23DiagnosticSignWarn\ttext\t \23DiagnosticSignWarn\1\0\2\vtexthl\24DiagnosticSignError\ttext\t \24DiagnosticSignError\16sign_define\afn0 let g:neo_tree_remove_legacy_commands = 1 \bcmd\bvim\0", "config", "neo-tree.nvim")
@@ -391,6 +392,10 @@ time([[Config for git-conflict.nvim]], false)
 time([[Config for persisted.nvim]], true)
 try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14persisted\frequire\0", "config", "persisted.nvim")
 time([[Config for persisted.nvim]], false)
+-- Config for: tailwind-sorter.nvim
+time([[Config for tailwind-sorter.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20tailwind-sorter\frequire\0", "config", "tailwind-sorter.nvim")
+time([[Config for tailwind-sorter.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
