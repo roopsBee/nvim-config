@@ -201,9 +201,12 @@ return packer.startup(function(use)
 	})
 
 	use("tpope/vim-fugitive")
-	use({ "ThePrimeagen/refactoring.nvim", requires = { { "nvim-lua/plenary.nvim" }, {
-		"nvim-treesitter/nvim-treesitter",
-	} } })
+	use({
+		"ThePrimeagen/refactoring.nvim",
+		requires = { { "nvim-lua/plenary.nvim" }, {
+			"nvim-treesitter/nvim-treesitter",
+		} },
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
