@@ -137,8 +137,8 @@ lspconfig.cucumber_language_server.setup({
 	cmd = { "cucumber-language-server", "--stdio" },
 	filetypes = { "cucumber", "feature" },
 	root_dir = lspconfig.util.find_git_ancestor,
-		cucumber = {
-			features = { "**/features/*.feature" },
-			glue = { "**/steps/*.ts" },
+	cucumber = {
+		features = { "**/features/*.feature" },
+		glue = { "**/steps/*.ts" },
 	},
 })

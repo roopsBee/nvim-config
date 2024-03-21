@@ -4,10 +4,6 @@ if not setup then
 	return
 end
 
--- for conciseness
-local formatting = null_ls.builtins.formatting -- to setup formatters
--- local diagnostics = null_ls.builtins.diagnostics -- to setup linters
-
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -17,11 +13,10 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-		null_ls.builtins.formatting.rustfmt, -- rustfmt
-		formatting.prettier.with({ -- js/ts formatter
+		null_ls.builtins.formatting.prettierd.with({ -- js/ts formatter
 			extra_filetypes = { "astro" },
 		}),
-		formatting.stylua, -- lua formatter
+		null_ls.builtins.formatting.stylua, -- lua formatter
 		-- diagnostics.eslint.with({
 		-- js/ts linter
 		-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
