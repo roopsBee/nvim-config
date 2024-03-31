@@ -22,8 +22,6 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
-keymap.set("n", "<C-d>", "<C-d>zz") -- scroll down half a page
-keymap.set("n", "<C-u>", "<C-u>zz") -- scroll up half a page
 keymap.set("n", "n", "nzzzv") -- center cursor on search
 keymap.set("n", "N", "Nzzzv") -- center cursor on search
 
