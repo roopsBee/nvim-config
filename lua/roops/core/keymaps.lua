@@ -102,3 +102,6 @@ keymap.set("n", "<C-h>", "<C-w>h") -- move to split left
 keymap.set("n", "<C-j>", "<C-w>j") -- move to split below
 keymap.set("n", "<C-k>", "<C-w>k") -- move to split above
 keymap.set("n", "<C-l>", "<C-w>l") -- move to split right
+
+-- luasnip
+keymap.set("i", "<C-l>", "<cmd>lua require'luasnip'.jump(1)<CR>")
