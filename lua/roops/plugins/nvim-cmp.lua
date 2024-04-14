@@ -19,6 +19,9 @@ end
 -- load vs-code like snippets from plugins (e.g. friendly-snippets)
 require("luasnip/loaders/from_vscode").lazy_load()
 
+-- load snippets from snipmate
+require("luasnip/loaders/from_snipmate").lazy_load({ paths = "./snippets" })
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
