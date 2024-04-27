@@ -123,7 +123,8 @@ return packer.startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context") -- sticky scroll
 
 	-- buffer line - barbar potentially is causing nvim to crash
-	use({ "akinsho/bufferline.nvim", tag = "v4.*", requires = "nvim-tree/nvim-web-devicons" })
+	-- used forked version of bufferline as there is an error with the original
+	use({ "Theyashsawarkar/bufferline.nvim", tag = "v4.*", requires = "nvim-tree/nvim-web-devicons" })
 	use("famiu/bufdelete.nvim") -- delete buffer without closing window
 
 	-- blank line indentation plugin
