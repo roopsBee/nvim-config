@@ -117,7 +117,7 @@ return packer.startup(function(use)
 	use("roxma/nvim-yarp")
 
 	-- github copilot
-	use("github/copilot.vim")
+	-- use("github/copilot.vim")
 
 	-- scroll
 	use("nvim-treesitter/nvim-treesitter-context") -- sticky scroll
@@ -207,6 +207,9 @@ return packer.startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" }, {
 			"nvim-treesitter/nvim-treesitter",
 		} },
+	})
+	use({
+		"supermaven-inc/supermaven-nvim",
 	})
 
 	if packer_bootstrap then
