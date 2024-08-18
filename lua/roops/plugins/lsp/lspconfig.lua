@@ -72,9 +72,20 @@ typescript.setup({
 })
 
 -- configure css server
-lspconfig["cssls"].setup({
+-- lspconfig["cssls"].setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = on_attach,
+-- })
+
+-- configure stylelint server
+lspconfig["stylelint_lsp"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	settings = {
+		stylelintplus = {
+			autoFixOnSave = true,
+		},
+	},
 })
 
 -- configure tailwindcss server
