@@ -72,10 +72,21 @@ typescript.setup({
 })
 
 -- configure css server
--- lspconfig["cssls"].setup({
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- })
+lspconfig["cssls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		css = {
+			validate = false,
+		},
+	},
+})
+
+-- configure cssmodules server
+lspconfig["cssmodules_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
 
 -- configure stylelint server
 lspconfig["stylelint_lsp"].setup({

@@ -146,12 +146,7 @@ return packer.startup(function(use)
 	-- session management
 	-- use({ "rmagatti/auto-session", tag = "v2.*" })
 
-	use({
-		"olimorris/persisted.nvim",
-		config = function()
-			require("persisted").setup()
-		end,
-	})
+	use({ "olimorris/persisted.nvim" })
 
 	-- better quickfix
 	use({ "kevinhwang91/nvim-bqf", ft = { "qf" } })
@@ -210,6 +205,12 @@ return packer.startup(function(use)
 	})
 	use({
 		"supermaven-inc/supermaven-nvim",
+	})
+
+	use("norcalli/nvim-colorizer.lua", {
+		config = function()
+			require("colorizer").setup()
+		end,
 	})
 
 	if packer_bootstrap then
