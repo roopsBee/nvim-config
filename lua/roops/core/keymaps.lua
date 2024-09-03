@@ -105,3 +105,6 @@ keymap.set("n", "<C-l>", "<C-w>l") -- move to split right
 
 -- luasnip
 keymap.set("i", "<C-l>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+
+-- colorizer toggle
+keymap.set("n", "<leader>ct", ":ColorizerToggle<CR>")
