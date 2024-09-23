@@ -24,7 +24,6 @@ which_key.setup({
 			g = true, -- bindings for prefixed with g
 		},
 	},
-	defer = {},
 	icons = {
 		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
 		separator = "➜", -- symbol used between a key and it's label
