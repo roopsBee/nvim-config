@@ -21,6 +21,28 @@ telescope.setup({
 				["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
 			},
 		},
+		vimgrep_arguments = {
+			"rg",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+			"--hidden",
+		},
+		file_ignore_patterns = {
+			".git/",
+			"node_modules/",
+			".cache/",
+			".history/",
+			".next/",
+			"build/",
+			"dist/",
+			"target/",
+			"out/",
+			".DS_Store",
+		},
 	},
 	extensions = {
 		media_files = {

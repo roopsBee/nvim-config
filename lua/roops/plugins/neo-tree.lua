@@ -419,7 +419,7 @@ require("neo-tree").setup({
 			visible = false, -- when true, they will just be displayed differently than normal items
 			force_visible_in_empty_folder = false, -- when true, hidden files will be shown if the root folder is otherwise empty
 			show_hidden_count = true, -- when true, the number of hidden items in each folder will be shown as the last entry
-			hide_dotfiles = true,
+			hide_dotfiles = false,
 			hide_gitignored = true,
 			hide_hidden = true, -- only works on Windows for hidden files/directories
 			hide_by_name = {
@@ -477,7 +477,7 @@ require("neo-tree").setup({
 		--end,
 		group_empty_dirs = false, -- when true, empty folders will be grouped together
 		search_limit = 50, -- max number of search results when using filters
-		follow_current_file = {enabled=true},
+		follow_current_file = { enabled = true },
 		-- the current file is changed while the tree is open.
 		hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
 		-- in whatever position is specified in window.position
@@ -489,7 +489,7 @@ require("neo-tree").setup({
 	},
 	buffers = {
 		bind_to_cwd = true,
-		follow_current_file = {enabled=true},
+		follow_current_file = { enabled = true },
 		-- the current file is changed while the tree is open.
 		group_empty_dirs = true, -- when true, empty directories will be grouped together
 		show_unloaded = false, -- When working with sessions, for example, restored but unfocused buffers
